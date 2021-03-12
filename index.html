@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/styles.min.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1 id="title">House Pets Survey Form</h1>
+				<p id="description">
+					Thank you for taking the time to help us learn more about
+					your little furry (and not so furry) friends at home!
+				</p>
+			</header>
+			<main class="container">
+				<form action="post" id="survey-form">
+					<div class="block">
+						<h3>
+							only fill this survey if you have at least one pet
+							in your home.
+						</h3>
+					</div>
+					<section class="under text-input">
+						<div class="block">
+							<label for="name" id="name-label">Name</label>
+							<input
+								type="text"
+								id="name"
+								placeholder="Enter your name"
+								required
+							/>
+						</div>
+						<div class="block">
+							<label for="email" id="email-label">Email</label>
+							<input
+								type="email"
+								id="email"
+								placeholder="Enter your email"
+								required
+							/>
+						</div>
+						<div class="block">
+							<label for="number" id="number-label">
+								Number of pets
+							</label>
+							<input
+								type="number"
+								id="number"
+								placeholder="# of pets"
+								min="1"
+								max="100"
+							/>
+						</div>
+					</section>
+					<section class="dropdown-list under">
+						<label for="dropdown">
+							What is your ideal pet size?
+						</label>
+						<select name="size" id="dropdown">
+							<option value="" disabled selected hidden>
+								Select ideal pet size
+							</option>
+							<option value="tiny">
+								Tiny (birds, hamsters, fish, etc.)
+							</option>
+							<option value="small">
+								Small (guinea pigs, small dog breeds, ferrets,
+								etc.)
+							</option>
+							<option value="medium">
+								Medium (cats, dogs, piglets, etc)
+							</option>
+							<option value="large">
+								Large (Horses, Large dog breeds, etc.)
+							</option>
+							<option value="any">Any size</option>
+						</select>
+					</section>
+					<section class="radio">
+						<label>Would you consider adopting another pet?</label>
+						<div class="option">
+							<input
+								type="radio"
+								id="definitely"
+								name="adopt"
+								value="definitely"
+							/>
+							<label for="definitely">Definitely</label>
+						</div>
+						<div class="option">
+							<input
+								type="radio"
+								id="maybe"
+								name="adopt"
+								value="maybe"
+							/>
+							<label for="maybe">Maybe</label>
+						</div>
+						<div class="option">
+							<input
+								type="radio"
+								id="not-sure"
+								name="adopt"
+								value="not sure"
+							/>
+							<label for="not-sure">Not Sure</label>
+						</div>
+						<div class="option">
+							<input
+								type="radio"
+								id="nope"
+								name="adopt"
+								value="not sure"
+							/>
+							<label for="nope">Not at all</label>
+						</div>
+					</section>
+					<section class="drop-2">
+						<label>What pet(s) do you currently own?</label>
+						<div class="option">
+							<input
+								type="checkbox"
+								id="canine"
+								name="current-ownership"
+								value="canine"
+							/>
+							<label for="canine">Dog(s)</label>
+						</div>
+						<div class="option">
+							<input
+								type="checkbox"
+								id="feline"
+								name="current-ownership"
+								value="feline"
+							/>
+							<label for="feline">Cat(s)</label>
+						</div>
+						<div class="option">
+							<input
+								type="checkbox"
+								id="rodent"
+								name="current-ownership"
+								value="rodent"
+							/>
+							<label for="rodent"
+								>Hamster(s) / ferret(s) / Guinea Pig(s)</label
+							>
+						</div>
+						<div class="option">
+							<input
+								type="checkbox"
+								id="avian"
+								name="current-ownership"
+								value="avian"
+							/>
+							<label for="avian">Bird(s)</label>
+						</div>
+					</section>
+					<section class="under comments">
+						<label for="text-area"> Additional Comments </label>
+						<textarea
+							id="text-area"
+							rows="2"
+							placeholder="Write down any additional comments that you may have regarding the topic of this survey!"
+						></textarea>
+					</section>
+					<button type="submit" id="submit">
+						Submit your answers!
+					</button>
+				</form>
+				<div class="credits">
+					<p>
+						Designed and coded by
+						<a href="https://github.com/NikolasP98"
+							>Nikolas Pinon</a
+						>
+					</p>
+				</div>
+			</main>
+		</div>
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	</body>
+</html>

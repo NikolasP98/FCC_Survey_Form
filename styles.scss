@@ -1,0 +1,140 @@
+// ===== IMPORTS =====
+
+// ===== VARIABLES =====
+$clr-purple: #744294;
+$clr-darker: #5c3475;
+$clr-text: ivory;
+$clr-link: #200dca;
+$clr-success: #339b33;
+
+// ===== CUSTOM SCSS =====
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.wrapper {
+		max-width: 90%;
+		z-index: 10;
+	}
+	&::before {
+		content: '';
+		z-index: 0;
+		background-image: linear-gradient(115deg, #3a3a9ecc, #8888ceb3),
+			url('https://pennsaukenvillas.com/wp-content/uploads/2017/10/pets.jpg');
+		position: fixed;
+		// opacity: 0.3;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 100%;
+		width: 100%;
+		pointer-events: none;
+	}
+}
+
+header {
+	padding: 0 2rem;
+	margin: 2rem 0;
+	* {
+		color: $clr-text;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+}
+
+.container {
+	padding: 3rem;
+	background-color: $clr-purple;
+	border-radius: 15px 15px 0 0;
+	section {
+		background-color: $clr-darker;
+		padding: 2rem;
+		margin: 20px 0;
+		border-radius: 10px;
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+	}
+	label,
+	p {
+		color: $clr-text;
+		font-weight: bold;
+	}
+
+	h3 {
+		text-align: center;
+		font-weight: bold;
+		color: $clr-text;
+		margin-bottom: 2.5rem;
+	}
+
+	.block + .block {
+		padding-top: 2rem;
+	}
+	input:not([type='radio']):not([type='checkbox']),
+	select,
+	textarea {
+		border-radius: 5px;
+		width: 100%;
+		height: 2rem;
+		border: 0;
+		padding: 5px 10px;
+	}
+	label + input,
+	label + select,
+	label + textarea,
+	.option + .option,
+	label + .option {
+		margin-top: 0.5rem;
+	}
+}
+
+.under {
+	label {
+		display: block;
+	}
+}
+
+textarea {
+	min-height: 100px;
+}
+
+button {
+	background-color: $clr-success;
+	color: $clr-text;
+	font-size: large;
+	font-weight: bold;
+	letter-spacing: 5px;
+	border: 0;
+	width: 100%;
+	padding: 1rem 3rem;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+}
+.credits {
+	text-align: center;
+	margin: 2rem 0 -1rem 0;
+	a {
+		color: $clr-link;
+		background-color: $clr-text;
+		text-decoration: none;
+		border-radius: 5px;
+		padding: 2px 5px;
+		font-weight: bold;
+	}
+}
+
+@media (max-width: 550px) {
+	.container {
+		padding: 1rem;
+	}
+}
